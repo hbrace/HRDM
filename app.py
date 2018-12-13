@@ -1,7 +1,6 @@
 from flask import Flask, Response, render_template, redirect, url_for
 import json
 import docker
-import subprocess
 
 app = Flask(__name__)
 
