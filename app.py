@@ -81,6 +81,7 @@ def killAll():
 
 @app.route('/start')
 def startDockerDev():
+    # TODO
     return redirect(url_for('checkContainers'))
 
 
