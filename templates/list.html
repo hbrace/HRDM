@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    .important { color: #336699; }
+    table, th, td {border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: left; }
+
+</style>
+{% endblock %}
+{% block content %}
+<table>
+    {% for conDict in listContainers %}
+    <tr>
+        <td>{{ conDict['name'] }}</td>
+        <td><a href="/attributes/{{ conDict['id'] }}"></a>Attributes</td>
+        <td><a href="/restart/{{ conDict['id'] }}">Restart</a></td>
+        <td><a href="/{{conDict['status']}}/{{ conDict['id'] }}">{{conDict['status'].title()}}</a></td>
+        <td><a href="/logs/{{conDict['id']}}">Logs</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

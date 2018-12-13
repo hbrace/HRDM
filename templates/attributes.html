@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+  {{ super() }}
+  <style type="text/css">
+    .important { color: #336699; }
+    table, th, td {border: 1px solid black; border-collapse: collapse; padding: 5px; text-align: left; }
+  </style>
+{% endblock %}
+{% block content %}
+    <div class="results">
+        <pre>{% print(containerDetails) %}</pre>
+    </div>
+{% endblock %}

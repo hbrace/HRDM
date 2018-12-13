@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>{% block title %}{% endblock %} - Hugh's DOCKER MANAGER</title>
+    {% endblock %}
+  </head>
+    <div id="nav">
+      <ul>
+          <li><a href="/list">Container List</a></li>
+          <li><a href="/start">Start All</a></li>
+          <li><a href="/killall">Kill All</a></li>
+      </ul>
+  </div>
+  <body>
+  <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+        +++ Hugh's DOCKER MANAGER +++
+      {% endblock %}
+    </div>
+  </body>
+</html>
