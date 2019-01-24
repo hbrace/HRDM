@@ -2,6 +2,7 @@ from flask import Flask, Response, render_template, redirect, url_for
 import json
 import docker
 
+# Flask Stuff
 app = Flask(__name__)
 
 
